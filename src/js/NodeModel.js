@@ -36,7 +36,7 @@ class NodeModel {
             const isParent = this.nodeHasChildren(node);
 
             this.flatNodes[node.value] = {
-                label: node.label,
+                title: node.title,
                 value: node.value,
                 children: node.children,
                 parent,

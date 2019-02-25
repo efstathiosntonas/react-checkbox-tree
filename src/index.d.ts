@@ -2,14 +2,13 @@ import * as React from 'react';
 
 declare module "react-checkbox-tree" {
     interface Node {
-        label: JSX.Element;
+        title: JSX.Element;
         value: string;
         children?: Array<Node>;
         className?: string;
         disabled?: boolean;
         icon?: JSX.Element;
         showCheckbox?: boolean;
-        title?: string;
     }
 
     interface Icons {

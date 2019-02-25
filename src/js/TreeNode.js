@@ -16,7 +16,7 @@ class TreeNode extends React.Component {
         icons: iconsShape.isRequired,
         isLeaf: PropTypes.bool.isRequired,
         isParent: PropTypes.bool.isRequired,
-        label: PropTypes.node.isRequired,
+        title: PropTypes.node.isRequired,
         lang: languageShape.isRequired,
         optimisticToggle: PropTypes.bool.isRequired,
         showNodeIcon: PropTypes.bool.isRequired,
@@ -33,7 +33,6 @@ class TreeNode extends React.Component {
         expandOnClick: PropTypes.bool,
         icon: PropTypes.node,
         showCheckbox: PropTypes.bool,
-        title: PropTypes.string,
         onClick: PropTypes.func,
     };
 
@@ -243,7 +242,7 @@ class TreeNode extends React.Component {
     }
 
     renderLabel() {
-        const { label, showCheckbox, showNodeIcon } = this.props;
+        const { title, showCheckbox, showNodeIcon } = this.props;
         const labelChildren = [
             showNodeIcon ? (
                 <span key={0} className="rct-node-icon">
@@ -251,7 +250,7 @@ class TreeNode extends React.Component {
                 </span>
             ) : null,
             <span key={1} className="rct-title">
-                {label}
+                {title}
             </span>,
         ];
 

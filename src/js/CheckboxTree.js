@@ -241,14 +241,13 @@ class CheckboxTree extends React.Component {
                     expanded={flatNode.expanded}
                     icon={node.icon}
                     icons={{ ...defaultIcons, ...icons }}
-                    label={node.label}
+                    title={node.title}
                     lang={lang}
                     optimisticToggle={optimisticToggle}
                     isLeaf={flatNode.isLeaf}
                     isParent={flatNode.isParent}
                     showCheckbox={showCheckbox}
                     showNodeIcon={showNodeIcon}
-                    title={showNodeTitle ? node.title || node.label : node.title}
                     treeId={id}
                     value={node.value}
                     onCheck={this.onCheck}
